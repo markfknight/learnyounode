@@ -1,0 +1,50 @@
+{
+  "name": "yearnyounode",
+  "version": "0.0.1",
+  "author": "markfknight (dev@markfknight.com)",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run ts-node",
+    "start:dev": "nodemon --exec npm run ts-node",
+    "start:dev:test": "nodemon --exec npm run ts-node:test",
+    "ts-node": "ts-node ./src/index.ts",
+    "prets-node:test": "npm test",
+    "ts-node:test": "npm run ts-node",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "pretest": "npm run lint",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markfknight/learnyounode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/markfknight/learnyounode/issues"
+  },
+  "homepage": "https://github.com/markfknight/learnyounode#readme",
+  "devDependencies": {
+    "@types/jest": "^20.0.0",
+    "@types/node": "^7.0.31",
+    "jest": "^20.0.4",
+    "nodemon": "^1.11.0",
+    "ts-jest": "^20.0.6",
+    "ts-node": "^3.0.6",
+    "tslint": "^5.4.3",
+    "tslint-language-service": "^0.9.6",
+    "typescript": "^2.4.0"
+  },
+  "jest": {
+    "mapCoverage": true,
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "notify": true,
+    "rootDir": "src/",
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/../node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$"
+  }
+}
