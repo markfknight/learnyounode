@@ -3,7 +3,7 @@ import * as process from 'process';
 
 export class Startup {
   public static main(argv: string[]): void {
-    console.log(linesInFile(argv[2]);
+    console.log(linesInFile(argv[2]));
   }
 }
 
