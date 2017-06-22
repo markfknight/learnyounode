@@ -15,6 +15,6 @@ beforeAll(() => {
 
 afterAll(() => fs.unlinkSync(fileName));
 
-test('Reads two one newline', () => {
+test('Reads one newline', () => {
     expect(linesInFile(fileName)).toBe(1);
 });

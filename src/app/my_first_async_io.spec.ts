@@ -16,7 +16,7 @@ beforeAll(() => {
 
 afterAll(() => unlinkSync(fileName))
 
-test('Reads one new line - async', done => {
+test('Reads two newlines - async', done => {
     function callback(data: number) {
         expect(data).toBe(2);
         done();
